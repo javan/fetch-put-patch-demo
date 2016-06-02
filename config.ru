@@ -1,14 +1,6 @@
 require 'bundler/setup'
 require 'rack'
-require 'rack/cors'
 require 'json'
-
-use Rack::Cors do
-  allow do
-    origins "*"
-    resource "*", headers: :any, methods: :any
-  end
-end
 
 use Rack::Static, urls: "/", index: "index.html"
 
