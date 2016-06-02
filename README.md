@@ -1,4 +1,4 @@
-`PUT` and `PATCH` [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) requests fail in Microsoft Edge, which [supports Fetch natively as of build 14342](https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/14342/). These requests succeed in all other browsers that support Fetch. Who gets it right? After reading [the spec], I'm not totally sure.
+`PUT` and `PATCH` [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) requests fail in Microsoft Edge, which [supports Fetch natively as of build 14342](https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/14342/). These requests succeed in all other browsers that support Fetch. Who gets it right? After reading [the spec](https://fetch.spec.whatwg.org/), I'm not totally sure.
 
 | Chrome 👍 | Canary 👍 | Firefox 👍 | Opera 👍 | MS Edge 👎 |
 |  ---  |  ---  |  ---  |  ---  |  ---  |
