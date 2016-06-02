@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Fetch</title>
+    <style>
+      h1 { font-size: 1.2rem; }
+      h2, h3 { font-size: 1rem; }
+    </style>
+  </head>
+  <body>
+    <h1><script>document.write(navigator.userAgent)</script></h1>
+    <ul></ul>
+
+    <script>
+      if (window.fetch) {
+        var container = document.querySelector("ul")
+
+        var performRequest = function(method) {
+          var element = document.createElement("li")
+          container.appendChild(element)
+
+          var request = {
+            method: method,
+            mode: "cors",
+            headers: {
+              "Accept": "application/json",
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ hello: "world" })
+          }
+
+          fetch("/ping", request)
+            .then(function(response) {
+              response.json().then(function(data) {
+                element.insertAdjacentHTML("beforeend", "<h2>" + method + " Response:</h2><pre>" + JSON.stringify(data, null, 2) + "</pre>")
+              })
+            }).catch(function(error) {
+              element.insertAdjacentHTML("beforeend", "<h2>" + method + " Error:</h2><pre>" + error.name + ": " + error.message + "</pre>")
+            })
+        }
+
+        "POST PUT PATCH".split(" ").forEach(performRequest)
+      }
+    </script>
+  </body>
+</html>
