@@ -1,3 +1,12 @@
+**Update:** Looks like it's an Edge bug.
+
+1. https://twitter.com/javan/status/738469502736728064
+2. https://twitter.com/davidgraham/status/738473923386302464
+3. https://twitter.com/gregwhitworth/status/738480911977578496
+4. **https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/7773267/** 🎉
+
+---
+
 `PUT` and `PATCH` [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) requests fail in Microsoft Edge, which [supports Fetch natively as of build 14342](https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/14342/). These requests succeed in all other browsers that support Fetch. Who gets it right? After reading [the spec](https://fetch.spec.whatwg.org/), I'm not totally sure.
 
 | Chrome 👍 | Canary 👍 | Firefox 👍 | Opera 👍 | MS Edge 👎 |
